@@ -1,11 +1,12 @@
 import React ,{useState}from "react";
+import {v4 as uuidv4} from "uuid";
 
 export const CreateTodo = ({addTodo})=>{
     const [todoTerm, setTodoTerm] = useState({});
     const handleOnchange = ({target})=>{
         setTodoTerm({
-            id: 1,   //need helper function to generate unique id
-            title: target.value,
+            id: uuidv4(),
+            title: target.value
         });
     }
 

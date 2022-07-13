@@ -6,7 +6,7 @@ export default function App(){
   const [todos, setTodos] = useState([]);
 
   const addTodo = (todo)=>{
-    // if(!todo.title.length) return;
+    // if(!todo.title.length) return;     //Need to implement
     setTodos(prev => [todo, ...prev]);
   }
 
